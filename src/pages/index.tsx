@@ -1,3 +1,4 @@
+import Form from "@/components/form";
 import Stepper from "@/components/stepper";
 import Head from "next/head";
 
@@ -12,7 +13,7 @@ export default function Home() {
       </Head>
       <main className="flex h-screen flex-col items-center justify-center">
         <div className="flex flex-col w-full max-w-[700px] bg-gray-100 p-4 shadow-lg gap-10 shadow-pink-200">
-          <Stepper />
+          <Form />
         </div>
       </main>
     </>

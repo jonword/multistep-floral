@@ -1,6 +1,11 @@
 import React from "react";
 
-const Stepper = () => {
+interface Props {
+  FormTitles: string[];
+  page: number;
+}
+
+const Stepper = ({ FormTitles, page }: Props) => {
   return (
     <>
       <div className="mx-4 flex items-center justify-between p-4">
