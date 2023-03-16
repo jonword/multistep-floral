@@ -19,15 +19,16 @@ const Form = () => {
   };
 
   const FormTitles = ["Card", "Delivery", "Payment"];
+
   return (
     <div>
       <div>
         <Stepper FormTitles={FormTitles} page={page} />
       </div>
       <div>
-        <div>
+        <div className=" justify-center gap-16 flex flex-col">
           <h1>{FormTitles[page]}</h1>
-          <div>{/* Body */}</div>
+          <div>{PageDisplay()}</div>
           <div className="flex justify-between items-center">
             <button
               className="p-2 px-4 text-gray-300 bg-emerald-900 hover:text-pink-200 hover:bg-emerald-700 duration-150"

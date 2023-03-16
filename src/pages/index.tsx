@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex h-screen flex-col items-center justify-center">
-        <div className="flex flex-col w-full max-w-[700px] bg-gray-100 p-4 shadow-lg gap-10 shadow-pink-200">
+        <div className="flex flex-col w-full max-w-[700px] bg-gray-100 p-4 shadow-md gap-10 shadow-pink-200">
           <Form />
         </div>
       </main>
