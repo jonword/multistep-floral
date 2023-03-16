@@ -21,13 +21,12 @@ const Form = () => {
   const FormTitles = ["Card", "Delivery", "Payment"];
 
   return (
-    <div>
+    <div className="flex flex-col gap-8">
       <div>
         <Stepper FormTitles={FormTitles} page={page} />
       </div>
       <div>
         <div className=" justify-center gap-16 flex flex-col">
-          <h1>{FormTitles[page]}</h1>
           <div>{PageDisplay()}</div>
           <div className="flex justify-between items-center">
             <button
