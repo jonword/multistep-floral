@@ -13,7 +13,7 @@ const CardForm = () => {
         <option>Thinking Of You</option>
       </select>
       <textarea
-        className="border p-2"
+        className="border p-2 h-32"
         placeholder="Add your card message."
       ></textarea>
       <input placeholder="Email" className="border p-2" required></input>
