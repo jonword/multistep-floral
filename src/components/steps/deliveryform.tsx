@@ -3,7 +3,7 @@ import React from "react";
 const DeliveryForm = () => {
   return (
     <form className="flex flex-col gap-2">
-      <select className="border p-2">
+      <select className="border p-1">
         <option>Delivery Order</option>
       </select>
       <div className="border border-gray-300 m-4" />
@@ -22,16 +22,26 @@ const DeliveryForm = () => {
       <label>City:</label>
       <input className="border p-1" />
       <label>State:</label>
-      <select className="border p-2">
+      <select className="border p-1">
         <option>New York</option>
       </select>
       <label>ZIP Code:</label>
       <input className="border p-1" />
       <label>Country:</label>
-      <select className="border p-2">
+      <select className="border p-1">
         <option>United States</option>
       </select>
       <div className="border border-gray-300 m-4" />
+      <label>Delivery Date:</label>
+      <select className="border p-1">
+        <option></option>
+      </select>
+      <div className="border border-gray-300 m-4" />
+      <label>Delivery Instructions (optional):</label>
+      <textarea
+        className="border p-2 h-32"
+        placeholder="Example: Deliver to the door on the side of the house."
+      ></textarea>
     </form>
   );
 };
