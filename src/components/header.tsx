@@ -9,7 +9,7 @@ const font = Nothing_You_Could_Do({
 
 const Header = () => {
   return (
-    <header className="sticky top-0 flex h-24 w-full items-center border-b p-8">
+    <header className="flex h-24 w-full items-center border-b p-8">
       <div className="flex items-center gap-2">
         <h1
           className={`text-5xl tracking-widest text-zinc-200 ${font.className}`}
