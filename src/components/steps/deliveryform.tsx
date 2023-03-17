@@ -33,6 +33,7 @@ const DeliveryForm = () => {
       </select>
       <div className="border border-gray-300 m-4" />
       <label>Delivery Date:</label>
+      {/* TODO: insert some sort of calendar option */}
       <select className="border p-1">
         <option></option>
       </select>
