@@ -2,7 +2,7 @@ import React from "react";
 
 const CardForm = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <form className="flex flex-col gap-2">
       <select className="border p-1">
         <option>Choose occasion</option>
         <option>Birthday</option>
@@ -17,7 +17,7 @@ const CardForm = () => {
         placeholder="Add your card message."
       ></textarea>
       <input placeholder="Email" className="border p-2" required></input>
-    </div>
+    </form>
   );
 };
 
