@@ -19,7 +19,6 @@ const Header = () => {
   const handleNav = (buttonName: string) => {
     setCurrNav(buttonName);
   };
-  console.log(currNav);
 
   return (
     <header className="flex h-24 w-full items-center justify-between border-b p-8">
@@ -36,7 +35,7 @@ const Header = () => {
           <button
             className={
               currNav === "home"
-                ? `text-xl text-pink-400 overline decoration-`
+                ? `text-xl text-pink-400 overline decoration-4`
                 : `text-xl text-zinc-200 hover:text-pink-300 hover:overline decoration-4 duration-300`
             }
             onClick={() => handleNav("home")}
@@ -48,7 +47,7 @@ const Header = () => {
           <button
             className={
               currNav === "work"
-                ? `text-xl text-pink-400 overline decoration-`
+                ? `text-xl text-pink-400 overline decoration-4`
                 : `text-xl text-zinc-200 hover:text-pink-300 hover:overline decoration-4 duration-300`
             }
             onClick={() => handleNav("work")}
@@ -60,7 +59,7 @@ const Header = () => {
           <button
             className={
               currNav === "contact"
-                ? `text-xl text-pink-400 overline decoration-`
+                ? `text-xl text-pink-400 overline decoration-4`
                 : `text-xl text-zinc-200 hover:text-pink-300 hover:overline decoration-4 duration-300`
             }
             onClick={() => handleNav("contact")}
