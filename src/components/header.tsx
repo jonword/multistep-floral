@@ -24,7 +24,7 @@ const Header = () => {
     <header className="flex h-24 w-full items-center justify-between border-b p-8">
       <div className="flex items-center justify-start">
         <h1 className={`text-3xl text-zinc-200 ${headerFont.className}`}>
-          Site Title Here
+          Lilium
         </h1>
         <MdLocalFlorist size={25} className="text-pink-300" />
       </div>
