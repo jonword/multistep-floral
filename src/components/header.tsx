@@ -33,7 +33,7 @@ const Header = () => {
         </div>
       </header>
       <nav
-        className={`${navFont.className} flex gap-3 pb-2 px-12 justify-end items-center border-b border-emerald-700/75`}
+        className={`${navFont.className} flex gap-3 pb-2 px-12 justify-end items-center`}
       >
         <Link href="/">
           <button
@@ -72,6 +72,7 @@ const Header = () => {
           </button>
         </Link>
       </nav>
+      <div className="border-b border-gray-700 mx-4 mb-6" />
     </>
   );
 };
