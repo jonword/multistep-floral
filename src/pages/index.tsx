@@ -29,14 +29,12 @@ export default function Home() {
             />
           </div>
           <div className="md:max-w-[500px]">
-            <p className={`${font.className} text-gray-200 text-lg`}>
+            <p className={`${font.className} text-lg`}>
               My name is Renee and I am a floral designer! From arrangements,
               bouquets, to centerpieces, I am passionate about bringing your
               vision to life! I specialize in:
             </p>
-            <ul
-              className={`${font.className} text-gray-200 text-lg list-disc pl-8`}
-            >
+            <ul className={`${font.className} text-lg list-disc pl-8`}>
               <li>Weddings</li>
               <li>Events</li>
               <li>Special Ocassions</li>
