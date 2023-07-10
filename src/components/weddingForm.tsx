@@ -3,9 +3,8 @@ import React from "react";
 const WeddingForm = () => {
   return (
     <form
-      name="Contact"
+      name="Wedding Inquiry"
       method="POST"
-      data-netlify="true"
       className="flex gap-2 w-full max-w-[600px] flex-col"
     >
       <label>Name:</label>
@@ -72,7 +71,7 @@ const WeddingForm = () => {
       />
       <button
         type="submit"
-        className=" mx-auto mt-2 flex items-center border-2 border-email bg-gray-800 px-4 py-3 text-white hover:bg-green-700 rounded-md"
+        className=" mx-auto mt-2 flex items-center border-2 border-email bg-gray-800 px-8 py-3 duration-150 text-white hover:bg-emerald-700 rounded-md text-lg"
       >
         Send
       </button>

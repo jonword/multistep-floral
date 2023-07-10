@@ -1,58 +1,48 @@
-import React from "react";
-import { Quattrocento } from "next/font/google";
+import React, { useState } from "react";
+import { Quattrocento, Barlow } from "next/font/google";
+import WeddingForm from "@/components/weddingForm";
+import GeneralForm from "@/components/generalForm";
 
-const font = Quattrocento({
+const quattrocento = Quattrocento({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const barlow = Barlow({
   subsets: ["latin"],
   weight: "400",
 });
 
 const Contact = () => {
+  const [form, setForm] = useState("general");
+
+  const handleForm = (formName: string) => setForm(formName);
+
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center p-4">
-      <h1
-        className={`${font.className} pb-2 text-center text-3xl text-gray-200`}
-      >
+    <>
+      <h1 className={`${quattrocento.className} pb-2 text-center text-4xl`}>
         Contact
       </h1>
-      <p className={`${font.className} text-gray-200`}>
-        If you are interested... Lets connect!
-      </p>
-      <form
-        name="Contact"
-        method="POST"
-        data-netlify="true"
-        className="flex gap-2 w-full max-w-[600px] flex-col"
+      <div
+        className={`${barlow.className} flex min-h-screen w-full flex-col items-center p-8 mb-32`}
       >
-        <div className="">
-          <p className="pb-8 text-white"></p>
+        <div className="flex gap-8">
+          <button
+            className="hover:bg-emerald-800 duration-200 bg-teal-900 p-4 text-gray-100"
+            onClick={() => handleForm("general")}
+          >
+            <p>General Inquiry</p>
+          </button>
+          <button
+            className="hover:bg-emerald-800 duration-200 bg-teal-900 p-4 text-gray-100"
+            onClick={() => handleForm("wedding")}
+          >
+            <p>Wedding Inquiry</p>
+          </button>
         </div>
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          className="p-2 rounded-md"
-        />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-          className="p-2 rounded-md"
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          className="p-2 rounded-md"
-          rows={10}
-        />
-        <button
-          type="submit"
-          className=" mx-auto mt-2 flex items-center border-2 border-email bg-navhover px-4 py-3 text-white hover:bg-green-700 rounded-md"
-        >
-          Send
-        </button>
-      </form>
-    </div>
+        {form === "wedding" ? <WeddingForm /> : <GeneralForm />}
+      </div>
+    </>
   );
 };
 
