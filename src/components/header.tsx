@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Nothing_You_Could_Do, Quattrocento } from "next/font/google";
+import { Nothing_You_Could_Do, Quattrocento, Barlow } from "next/font/google";
 import { MdLocalFlorist } from "react-icons/md";
 
 const headerFont = Nothing_You_Could_Do({
@@ -8,7 +8,7 @@ const headerFont = Nothing_You_Could_Do({
   weight: "400",
 });
 
-const navFont = Quattrocento({
+const navFont = Barlow({
   subsets: ["latin"],
   weight: "400",
 });
@@ -47,16 +47,16 @@ const Header = () => {
             <p>Home</p>
           </button>
         </Link>
-        <Link href="/work">
+        <Link href="/about">
           <button
             className={
-              currNav === "work"
+              currNav === "about"
                 ? `text-xl text-emerald-800 decoration-1`
                 : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
             }
-            onClick={() => handleNav("work")}
+            onClick={() => handleNav("about")}
           >
-            <p>Work</p>
+            <p>About</p>
           </button>
         </Link>
         <Link href="/contact">
