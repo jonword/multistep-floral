@@ -33,14 +33,14 @@ const Header = () => {
         </div>
       </header>
       <nav
-        className={`${navFont.className} flex gap-3 py-4 px-6 justify-end items-center border-b border-emerald-700/75`}
+        className={`${navFont.className} flex gap-3 pb-2 px-12 justify-end items-center border-b border-emerald-700/75`}
       >
         <Link href="/">
           <button
             className={
               currNav === "home"
-                ? `text-xl text-pink-700 decoration-1`
-                : `text-xl hover:text-emerald-300 hover:overline decoration-1 duration-300`
+                ? `text-xl text-emerald-800 decoration-1`
+                : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
             }
             onClick={() => handleNav("home")}
           >
@@ -51,8 +51,8 @@ const Header = () => {
           <button
             className={
               currNav === "work"
-                ? `text-xl text-pink-700 decoration-1`
-                : `text-xl hover:text-emerald-300 hover:overline decoration-1 duration-300`
+                ? `text-xl text-emerald-800 decoration-1`
+                : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
             }
             onClick={() => handleNav("work")}
           >
@@ -63,8 +63,8 @@ const Header = () => {
           <button
             className={
               currNav === "contact"
-                ? `text-xl text-pink-700 decoration-1`
-                : `text-xl hover:text-emerald-300 hover:overline decoration-1 duration-300`
+                ? `text-xl text-emerald-800 decoration-1`
+                : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
             }
             onClick={() => handleNav("contact")}
           >
