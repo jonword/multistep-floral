@@ -28,6 +28,12 @@ const GeneralForm = () => {
         className="p-2 border border-black rounded-md"
         rows={10}
       />
+      <button
+        type="submit"
+        className=" mx-auto mt-2 flex items-center border-2 border-email bg-gray-800 px-8 py-3 duration-150 text-white hover:bg-emerald-700 rounded-sm text-lg"
+      >
+        Send
+      </button>
     </form>
   );
 };

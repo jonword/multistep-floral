@@ -39,8 +39,8 @@ const Header = () => {
           <button
             className={
               currNav === "home"
-                ? `text-xl text-emerald-800 decoration-1`
-                : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
+                ? `text-xl text-emerald-800 overline decoration-1`
+                : `text-xl hover:overline decoration-1 duration-150`
             }
             onClick={() => handleNav("home")}
           >
@@ -51,8 +51,8 @@ const Header = () => {
           <button
             className={
               currNav === "about"
-                ? `text-xl text-emerald-800 decoration-1`
-                : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
+                ? `text-xl text-emerald-800 overline decoration-1`
+                : `text-xl hover:overline decoration-1 duration-150`
             }
             onClick={() => handleNav("about")}
           >
@@ -63,8 +63,8 @@ const Header = () => {
           <button
             className={
               currNav === "contact"
-                ? `text-xl text-emerald-800 decoration-1`
-                : `text-xl hover:text-pink-600 hover:overline decoration-1 duration-150`
+                ? `text-xl text-emerald-800 overline decoration-1`
+                : `text-xl hover:overline decoration-1 duration-150`
             }
             onClick={() => handleNav("contact")}
           >
