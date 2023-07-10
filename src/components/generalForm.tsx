@@ -12,7 +12,7 @@ const GeneralForm = () => {
         type="text"
         placeholder="Name"
         name="name"
-        className="p-2 border border-black rounded-md"
+        className="p-2 border border-black rounded-sm"
       />
       <label>Email:</label>
       <input
@@ -20,12 +20,12 @@ const GeneralForm = () => {
         name="email"
         id="email"
         placeholder="Email"
-        className="p-2 border border-black rounded-md"
+        className="p-2 border border-black rounded-sm"
       />
       <label>Message:</label>
       <textarea
         name="description"
-        className="p-2 border border-black rounded-md"
+        className="p-2 border border-black rounded-sm"
         rows={10}
       />
       <button
