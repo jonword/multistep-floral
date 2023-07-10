@@ -31,6 +31,7 @@ const WeddingForm = () => {
       />
       <label>Estimated Floral Budget:</label>
       <select name="budget" className="p-2 border border-black rounded-sm">
+        <option>Select Price Range</option>
         <option>$500-$1000</option>
         <option>$1000-$1500</option>
         <option>$1500-$2500</option>
