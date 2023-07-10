@@ -25,7 +25,7 @@ export default function Home() {
               height={400}
               width={400}
               alt=""
-              className=" rounded-2xl"
+              className=" rounded-lg"
             />
           </div>
           <div className="md:max-w-[500px]">

@@ -71,7 +71,7 @@ const WeddingForm = () => {
       />
       <button
         type="submit"
-        className=" mx-auto mt-2 flex items-center border-2 border-email bg-gray-800 px-8 py-3 duration-150 text-white hover:bg-emerald-700 rounded-sm text-lg"
+        className=" mx-auto mt-2 flex items-center bg-gray-800 px-8 py-3 duration-150 text-white hover:bg-emerald-900 rounded-sm text-lg"
       >
         Send
       </button>
