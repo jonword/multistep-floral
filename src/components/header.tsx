@@ -25,11 +25,11 @@ const Header = () => {
       <header className="flex h-32 w-full items-center justify-center  p-8">
         <div className="flex items-center justify-start">
           <h1
-            className={`${barlow.className} text-6xl font-bold text-teal-800 `}
+            className={`${barlow.className} text-6xl font-bold text-teal-800`}
           >
             Lilium
           </h1>
-          <MdLocalFlorist size={25} className="text-pink-400" />
+          <MdLocalFlorist size={25} className="text-pink-400/75" />
         </div>
       </header>
       <nav
@@ -40,7 +40,7 @@ const Header = () => {
             className={
               currNav === "home"
                 ? `text-xl text-emerald-800 overline decoration-1`
-                : `text-xl hover:overline decoration-1 duration-150`
+                : `text-xl hover:overline decoration-1  duration-150`
             }
             onClick={() => handleNav("home")}
           >
