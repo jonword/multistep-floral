@@ -8,7 +8,7 @@ const headerFont = Nothing_You_Could_Do({
   weight: "400",
 });
 
-const navFont = Barlow({
+const barlow = Barlow({
   subsets: ["latin"],
   weight: "400",
 });
@@ -25,7 +25,7 @@ const Header = () => {
       <header className="flex h-32 w-full items-center justify-center  p-8">
         <div className="flex items-center justify-start">
           <h1
-            className={`${headerFont.className} text-6xl font-bold text-teal-800 `}
+            className={`${barlow.className} text-6xl font-bold text-teal-800 `}
           >
             Lilium
           </h1>
@@ -33,7 +33,7 @@ const Header = () => {
         </div>
       </header>
       <nav
-        className={`${navFont.className} flex gap-3 pb-2 px-12 justify-center items-center`}
+        className={`${barlow.className} flex gap-3 pb-2 px-12 justify-center items-center`}
       >
         <Link href="/">
           <button
