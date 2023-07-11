@@ -1,4 +1,13 @@
 import React from "react";
+import { z } from "zod";
+
+const generalSchema = z
+  .object({
+    name: z.string(),
+    email: z.string().email(),
+    message: z.string(),
+  })
+  .required();
 
 const GeneralForm = () => {
   return (
