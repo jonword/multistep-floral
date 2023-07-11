@@ -10,9 +10,9 @@ type FormData = {
 };
 
 const generalSchema: ZodType<FormData> = z.object({
-  name: z.string({ required_error: "Name is Required" }),
+  name: z.string(),
   email: z.string().email(),
-  message: z.string({ required_error: "Message is Required" }),
+  message: z.string(),
 });
 
 const GeneralForm = () => {
@@ -22,36 +22,35 @@ const GeneralForm = () => {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(generalSchema) });
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit: SubmitHandler<FormData> = (data) => console.log(data);
 
   return (
     <form
       name="General Inquiry"
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       method="POST"
       className="flex gap-2 w-full max-w-[600px] flex-col"
     >
-      <label>Name:</label>
+      <label htmlFor="name">Name:</label>
       <input
-        {...register("name")}
         type="text"
-        name="name"
+        id="name"
+        {...register("name", { required: true })}
         className="p-2 border border-black rounded-sm"
       />
-      <label>Email:</label>
+      <label htmlFor="email">Email:</label>
 
       <input
-        {...register("email")}
         type="email"
-        name="email"
+        id="email"
+        {...register("email", { required: true })}
         className="p-2 border border-black rounded-sm"
       />
       <label htmlFor="message">Message:</label>
 
       <textarea
-        {...register("message")}
         id="message"
-        name="description"
+        {...register("message", { required: true })}
         className="p-2 border border-black rounded-sm"
         rows={10}
       />
