@@ -10,9 +10,9 @@ type FormData = {
 };
 
 const generalSchema: ZodType<FormData> = z.object({
-  name: z.string(),
-  email: z.string().email(),
-  message: z.string(),
+  name: z.string({ required_error: "Required" }).min(2),
+  email: z.string({ required_error: "Required" }).email(),
+  message: z.string({ required_error: "Required" }).min(5),
 });
 
 const GeneralForm = () => {
@@ -32,6 +32,7 @@ const GeneralForm = () => {
       className="flex gap-2 w-full max-w-[600px] flex-col"
     >
       <label htmlFor="name">Name:</label>
+      <p className="text-red-500">{errors.name?.message}</p>
       <input
         type="text"
         id="name"
@@ -39,7 +40,7 @@ const GeneralForm = () => {
         className="p-2 border border-black rounded-sm"
       />
       <label htmlFor="email">Email:</label>
-
+      <p className="text-red-500">{errors.email?.message}</p>
       <input
         type="email"
         id="email"
@@ -47,7 +48,7 @@ const GeneralForm = () => {
         className="p-2 border border-black rounded-sm"
       />
       <label htmlFor="message">Message:</label>
-
+      <p className="text-red-500">{errors.message?.message}</p>
       <textarea
         id="message"
         {...register("message", { required: true })}
