@@ -29,14 +29,11 @@ const Contact = () => {
               <p>General Inquiry</p>
             </button>
           </Link>
-          <Link
-            href="https://forms.gle/9wB3Chh2BpGFujug6"
-            target="_blank"
-          ></Link>
-
-          <button className="hover:bg-emerald-800 duration-200 bg-teal-900 p-4 text-gray-100">
-            <p>Wedding Inquiry</p>
-          </button>
+          <Link href="https://forms.gle/9wB3Chh2BpGFujug6" target="_blank">
+            <button className="hover:bg-emerald-800 duration-200 bg-teal-900 p-4 text-gray-100">
+              <p>Wedding Inquiry</p>
+            </button>
+          </Link>
         </div>
       </div>
     </>
