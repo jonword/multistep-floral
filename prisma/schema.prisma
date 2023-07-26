@@ -12,7 +12,7 @@ datasource db {
 
 model Photos {
   id Int @id @default(autoincrement())
-  name String
+  alt String
   image String
 
 }
