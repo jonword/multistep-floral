@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Barlow } from "next/font/google";
 import type { Photos } from "@prisma/client";
-import PhotoCard from "@/components/photo";
+import PhotoCard from "@/components/photocard";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import prisma from "@/util/prisma";
 
