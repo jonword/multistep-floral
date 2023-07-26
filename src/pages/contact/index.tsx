@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Quattrocento, Barlow } from "next/font/google";
-import WeddingForm from "@/components/weddingForm";
-import GeneralForm from "@/components/generalForm";
 import Link from "next/link";
 
 const quattrocento = Quattrocento({
