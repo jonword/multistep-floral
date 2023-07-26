@@ -1,13 +1,23 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Barlow } from "next/font/google";
+import type { Photos } from "@prisma/client";
+import PhotoCard from "@/components/photo";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import prisma from "@/util/prisma";
+
+interface Props {
+  data: Photos[];
+}
 
 const font = Barlow({
   subsets: ["latin"],
   weight: "400",
 });
 
-export default function Home() {
+export default function Home({
+  data,
+}: InferGetServerSidePropsType<typeof getServerSideProps> & Props) {
   return (
     <>
       <Head>
@@ -17,10 +27,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-full w-full p-16">
-        <div className="flex mx-auto flex-col md:flex-row h-full w-full items-center justify-center p-4 gap-6">
-          <div className="h-[300px] w-[300px] bg-gray-300 rounded-md" />
+        <div className="flex mx-auto flex-col md:flex-row h-full w-full items-center justify-center gap-2 flex-wrap">
+          {data.map((x) => (
+            <PhotoCard key={x.id} photos={x} />
+          ))}
         </div>
       </main>
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const data = await prisma.photos.findMany();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
