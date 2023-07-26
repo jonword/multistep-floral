@@ -27,7 +27,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-full w-full p-16">
-        <div className="flex mx-auto flex-col md:flex-row h-full w-full items-center justify-center gap-2 flex-wrap">
+        <div className="flex flex-col md:flex-row h-full w-full items-center justify-center gap-8 flex-wrap">
           {data.map((x) => (
             <PhotoCard key={x.id} photos={x} />
           ))}

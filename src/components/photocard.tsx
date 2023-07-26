@@ -9,8 +9,8 @@ interface Props {
 const PhotoCard = ({ photos }: Props) => {
   return (
     <>
-      <div>
-        <Image src={photos.image} alt={photos.alt} height={300} width={300} />
+      <div className="">
+        <Image src={photos.image} alt={photos.alt} width={500} height={500} />
       </div>
     </>
   );
