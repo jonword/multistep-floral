@@ -14,59 +14,34 @@ const barlow = Barlow({
 });
 
 const Header = () => {
-  const [currNav, setCurrNav] = useState("");
-
-  const handleNav = (buttonName: string) => {
-    setCurrNav(buttonName);
-  };
-
   return (
     <>
-      <header className="flex h-32 w-full items-center justify-center  p-8">
+      <header className="flex h-32 w-full items-center justify-center p-8">
         <div className="flex items-center justify-start">
-          <h1
-            className={`${barlow.className} text-6xl font-bold text-teal-800`}
-          >
-            Lilium
-          </h1>
-          <MdLocalFlorist size={25} className="text-pink-400/75" />
+          <Link href="/">
+            <h1
+              className={`${barlow.className} text-3xl font-bold text-teal-800`}
+            >
+              Lilium
+            </h1>
+          </Link>
+
+          <MdLocalFlorist size={20} className="text-pink-400/75" />
         </div>
       </header>
       <nav
         className={`${barlow.className} flex gap-3 pb-2 px-12 justify-end items-center`}
       >
-        <Link href="/">
-          <button
-            className={
-              currNav === "home"
-                ? `text-xl text-emerald-800 overline decoration-1`
-                : `text-xl hover:overline decoration-1  duration-150`
-            }
-            onClick={() => handleNav("home")}
-          >
-            <p>Home</p>
-          </button>
-        </Link>
         <Link href="/about">
           <button
-            className={
-              currNav === "about"
-                ? `text-xl text-emerald-800 overline decoration-1`
-                : `text-xl hover:overline decoration-1 duration-150`
-            }
-            onClick={() => handleNav("about")}
+            className={`text-xl hover:overline decoration-1 duration-150`}
           >
             <p>About</p>
           </button>
         </Link>
         <Link href="/contact">
           <button
-            className={
-              currNav === "contact"
-                ? `text-xl text-emerald-800 overline decoration-1`
-                : `text-xl hover:overline decoration-1 duration-150`
-            }
-            onClick={() => handleNav("contact")}
+            className={`text-xl hover:overline decoration-1 duration-150`}
           >
             <p>Contact</p>
           </button>
