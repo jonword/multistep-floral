@@ -40,6 +40,13 @@ const Header = () => {
               <p>About</p>
             </button>
           </Link>
+          <Link href="/work">
+            <button
+              className={`text-lg hover:overline decoration-1 duration-150`}
+            >
+              <p>Work</p>
+            </button>
+          </Link>
           <Link href="/contact">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
@@ -69,6 +76,13 @@ const Header = () => {
               onClick={handleClick}
             >
               <p>About</p>
+            </button>
+          </Link>
+          <Link href="/work">
+            <button
+              className={`text-lg hover:overline decoration-1 duration-150`}
+            >
+              <p>Work</p>
             </button>
           </Link>
           <Link href="/contact">

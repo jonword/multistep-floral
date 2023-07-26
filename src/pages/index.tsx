@@ -26,12 +26,8 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-full w-full p-16">
-        <div className="flex flex-col md:flex-row h-full w-full items-center justify-center gap-8 flex-wrap">
-          {data.map((x) => (
-            <PhotoCard key={x.id} photos={x} />
-          ))}
-        </div>
+      <main className="h-full w-full">
+        <div>HomePage</div>
       </main>
     </>
   );
