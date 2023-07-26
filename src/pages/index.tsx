@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className="h-full w-full p-16">
         <div className="flex mx-auto flex-col md:flex-row h-full w-full items-center justify-center p-4 gap-6">
-          <div className="h-[400px] w-[400px] bg-gray-300 rounded-md" />
+          <div className="h-[300px] w-[300px] bg-gray-300 rounded-md" />
         </div>
       </main>
     </>
