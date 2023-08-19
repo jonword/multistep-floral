@@ -81,6 +81,7 @@ const Header = () => {
           <Link href="/work">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
+              onClick={handleClick}
             >
               <p>Work</p>
             </button>
