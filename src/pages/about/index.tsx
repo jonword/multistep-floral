@@ -15,24 +15,24 @@ const About = () => {
         <div>
           <Image
             src={floral}
-            height={400}
-            width={400}
+            height={300}
+            width={300}
             alt=""
             className=" rounded-lg"
           />
         </div>
         <div className="md:max-w-[500px]">
           <p className={`${font.className} text-lg`}>
-            My name is Renee and I am a floral designer! From arrangements,
-            bouquets, to centerpieces, I am passionate about bringing your
-            vision to life! I specialize in:
+            Lilium Flowers is a wedding and event floral company based in
+            Opelika, AL specializing in whimsical, modern, & detailed design.
+            The team is headed up by Floral Designer Renee Word, who is devoted
+            to working with our clients to curate a visual story and whimsical
+            experience that is unique to each couple, and reflects both their
+            lifestyle and love story. We are passionate about intentionality and
+            strive to listen to your vision and make every detail of your day
+            beautiful and unique, while giving you a seamless and stress free
+            experience.
           </p>
-          <ul className={`${font.className} text-lg list-disc pl-8`}>
-            <li>Weddings</li>
-            <li>Events</li>
-            <li>Special Ocassions</li>
-            <li>Personal Arrangements</li>
-          </ul>
         </div>
       </div>
     </div>
