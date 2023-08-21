@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Nothing_You_Could_Do, Quattrocento, Barlow } from "next/font/google";
+import { Nothing_You_Could_Do, Barlow } from "next/font/google";
 import { MdLocalFlorist } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -18,6 +18,8 @@ const Header = () => {
   const [nav, setNav] = useState(false);
 
   const handleClick = () => setNav(!nav);
+
+
 
   return (
     <>
@@ -40,6 +42,7 @@ const Header = () => {
               <p>About</p>
             </button>
           </Link>
+
           <Link href="/work">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
@@ -47,6 +50,7 @@ const Header = () => {
               <p>Work</p>
             </button>
           </Link>
+
           <Link href="/contact">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
@@ -78,6 +82,7 @@ const Header = () => {
               <p>About</p>
             </button>
           </Link>
+
           <Link href="/work">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
@@ -86,6 +91,7 @@ const Header = () => {
               <p>Work</p>
             </button>
           </Link>
+
           <Link href="/contact">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
