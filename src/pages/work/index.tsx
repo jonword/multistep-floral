@@ -19,7 +19,7 @@ const Work = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps> & Props) => {
   return (
     <>
-      <main className="min-h-screen w-full p-16">
+      <main className="h-full w-full p-16">
         <div className="flex flex-col md:flex-row h-full w-full items-center justify-center gap-8 flex-wrap">
           {data.map((x) => (
             <PhotoCard key={x.id} photos={x} />

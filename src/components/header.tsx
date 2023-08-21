@@ -19,8 +19,6 @@ const Header = () => {
 
   const handleClick = () => setNav(!nav);
 
-
-
   return (
     <>
       <header className="flex h-20 w-full items-center justify-between px-8">

@@ -18,6 +18,9 @@ const Contact = () => {
       <h1 className={`${quattrocento.className} pb-2 text-center text-4xl`}>
         Contact
       </h1>
+      <p className={`${barlow.className} text-center pb-2`}>
+        For inquiries, please use one of the links below. Lets connect :)
+      </p>
       <div
         className={`${barlow.className} flex min-h-screen w-full flex-col items-center p-8 mb-32`}
       >
