@@ -33,14 +33,6 @@ const Header = () => {
           <MdLocalFlorist size={20} className="text-pink-400/75" />
         </div>
         <nav className={`${barlow.className} hidden md:flex gap-2`}>
-          <Link href="/about">
-            <button
-              className={`text-lg hover:overline decoration-1 duration-150`}
-            >
-              <p>About</p>
-            </button>
-          </Link>
-
           <Link href="/work">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
@@ -72,15 +64,6 @@ const Header = () => {
               : `${barlow.className} absolute top-0 right-0 h-screen w-full flex-col items-center pt-20 bg-gray-100 flex gap-2`
           }
         >
-          <Link href="/about">
-            <button
-              className={`text-lg hover:overline decoration-1 duration-150`}
-              onClick={handleClick}
-            >
-              <p>About</p>
-            </button>
-          </Link>
-
           <Link href="/work">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}

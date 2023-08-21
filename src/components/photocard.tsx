@@ -10,7 +10,13 @@ const PhotoCard = ({ photos }: Props) => {
   return (
     <>
       <div className="">
-        <Image src={photos.image} alt={photos.alt} width={500} height={500} />
+        <Image
+          src={photos.image}
+          alt={photos.alt}
+          width={500}
+          height={500}
+          className="w-auto h-auto"
+        />
       </div>
     </>
   );
