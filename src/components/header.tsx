@@ -18,6 +18,9 @@ const Header = () => {
   const [nav, setNav] = useState(false);
 
   const handleClick = () => setNav(!nav);
+
+
+
   return (
     <>
       <header className="flex h-20 w-full items-center justify-between px-8">
@@ -39,6 +42,15 @@ const Header = () => {
               <p>About</p>
             </button>
           </Link>
+
+          <Link href="/work">
+            <button
+              className={`text-lg hover:overline decoration-1 duration-150`}
+            >
+              <p>Work</p>
+            </button>
+          </Link>
+
           <Link href="/contact">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
@@ -70,6 +82,16 @@ const Header = () => {
               <p>About</p>
             </button>
           </Link>
+
+          <Link href="/work">
+            <button
+              className={`text-lg hover:overline decoration-1 duration-150`}
+              onClick={handleClick}
+            >
+              <p>Work</p>
+            </button>
+          </Link>
+
           <Link href="/contact">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
