@@ -11,7 +11,7 @@ const font = Barlow({
 const About = () => {
   return (
     <div>
-      <div className="flex mx-auto flex-col md:flex-row h-full w-full items-center justify-center p-4 gap-6">
+      <div className="flex mx-auto flex-col md:flex-row h-screen w-full items-center justify-center p-4 gap-6">
         <div>
           <Image
             src={floral}

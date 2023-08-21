@@ -1,7 +1,24 @@
 import React from "react";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="flex h-12 bg-gray-100 w-full justify-center px-4 gap-6 items-center mt-[100px]">
+      <button className="text-[#4267B2] text-3xl hover:text-4xl duration-150">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=61550353658031&mibextid=2JQ9oc"
+        >
+          <FaFacebookSquare />
+        </a>
+      </button>
+      <button className="text-3xl hover:text-4xl text-gray-200 bg-gradient-to-tr from-[#8A3AB9] to-[#BC2A8D] rounded-md duration-150">
+        <a target="_blank" href="https://www.instagram.com/liliumflorals/">
+          <FaInstagram />
+        </a>
+      </button>
+    </footer>
+  );
 };
 
 export default Footer;
