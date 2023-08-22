@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import floral from "../../public/assets/images/about/IMG_9834.png";
+import floral from "../../public/assets/images/carousel/308A0113.jpg";
 import { Barlow } from "next/font/google";
 import Head from "next/head";
 
@@ -19,19 +19,19 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex h-screen w-full flex-col pt-24 gap-12">
-        <div className="flex justify-center md:justify-start border md:px-10">
+        <div className="flex justify-center md:justify-start md:pl-24">
           <h1 className="text-4xl">Lilium Florals Animation</h1>
         </div>
-        <div className=" flex justify-center items-center p-4 ">
+        <div className=" flex justify-center items-center p-4">
           <Image
-            src=""
+            src={floral}
             height={400}
-            width={600}
+            width={700}
             alt=""
             className="bg-gray-100 rounded-lg"
           />
         </div>
-        <div className="flex justify-center md:justify-end md:pr-10">
+        <div className="flex justify-center md:justify-end md:pr-24">
           <h2 className="text-xl">Hero description here</h2>
         </div>
       </main>
