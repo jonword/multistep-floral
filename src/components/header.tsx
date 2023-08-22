@@ -83,7 +83,6 @@ const Header = () => {
           </Link>
         </nav>
       </header>
-      <div className="border-b border-gray-300 mx-8" />
     </>
   );
 };
