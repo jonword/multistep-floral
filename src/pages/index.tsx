@@ -4,7 +4,7 @@ import floral from "../../public/assets/images/carousel/308A0113.jpg";
 import { Barlow } from "next/font/google";
 import Head from "next/head";
 
-const font = Barlow({
+const barlow = Barlow({
   subsets: ["latin"],
   weight: "400",
 });
@@ -19,8 +19,10 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex h-screen w-full flex-col pt-24 gap-12">
-        <div className="flex justify-center md:justify-start md:pl-24">
-          <h1 className="text-4xl">Lilium Florals Animation</h1>
+        <div className="flex justify-center md:justify-start md:pl-36">
+          <h1 className={`${barlow.className} text-4xl`}>
+            Lilium Florals Animation
+          </h1>
         </div>
         <div className=" flex justify-center items-center p-4">
           <Image
@@ -31,8 +33,10 @@ const Home = () => {
             className="bg-gray-100 rounded-lg"
           />
         </div>
-        <div className="flex justify-center md:justify-end md:pr-24">
-          <h2 className="text-xl">Hero description here</h2>
+        <div className="flex justify-center md:justify-end md:pr-36">
+          <h2 className={`${barlow.className} text-2xl`}>
+            Hero description here
+          </h2>
         </div>
       </main>
     </>
