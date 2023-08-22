@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <h1
-              className={`${headerFont.className} text-3xl font-bold text-teal-800`}
+              className={`${barlow.className} text-3xl font-bold text-gray-700 tracking-wide`}
             >
               Lilium
             </h1>
@@ -74,6 +74,7 @@ const Header = () => {
           <Link href="/about">
             <button
               className={`text-lg hover:overline decoration-1 duration-150`}
+              onClick={handleClick}
             >
               <p>About</p>
             </button>

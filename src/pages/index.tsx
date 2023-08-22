@@ -1,10 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import floral from "../../public/assets/images/carousel/308A0113.jpg";
-import { Barlow } from "next/font/google";
+import { Barlow, Nothing_You_Could_Do } from "next/font/google";
+import { MdLocalFlorist } from "react-icons/md";
 import Head from "next/head";
+import { TypeAnimation } from "react-type-animation";
 
 const barlow = Barlow({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const fancy = Nothing_You_Could_Do({
   subsets: ["latin"],
   weight: "400",
 });
@@ -20,9 +27,13 @@ const Home = () => {
       </Head>
       <main className="flex h-screen w-full flex-col pt-24 gap-12">
         <div className="flex justify-center md:justify-start md:pl-36">
-          <h1 className={`${barlow.className} text-4xl`}>
-            Lilium Florals Animation
-          </h1>
+          <TypeAnimation
+            sequence={[`Lilium Florals`]}
+            cursor={false}
+            wrapper={"h1"}
+            speed={1}
+            className={`${fancy.className} text-5xl md:text-8xl font-bold text-teal-800`}
+          />
         </div>
         <div className=" flex justify-center items-center p-4">
           <Image
