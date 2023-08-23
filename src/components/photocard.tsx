@@ -15,7 +15,7 @@ const PhotoCard = ({ photos }: Props) => {
           alt={photos.alt}
           width={500}
           height={500}
-          className="w-auto h-auto"
+          className="w-auto h-auto rounded-md"
         />
       </div>
     </>

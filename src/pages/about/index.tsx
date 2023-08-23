@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import floral from "../../../public/assets/images/about/IMG_9834.png";
+import floral from "../../../public/assets/images/about/IMG_0009.jpg";
 import { Barlow } from "next/font/google";
 
 const font = Barlow({
@@ -11,13 +11,13 @@ const font = Barlow({
 const About = () => {
   return (
     <main>
-      <div className="flex mx-auto flex-col md:flex-row h-screen w-full items-center justify-center p-4 gap-6">
+      <div className="flex mx-auto flex-col md:flex-row h-screen w-full items-center justify-center p-4 gap-10 md:gap-24">
         <div>
           <Image
             src={floral}
             height={300}
             width={300}
-            alt=""
+            alt="Florals by Renee"
             className=" rounded-lg"
           />
         </div>
