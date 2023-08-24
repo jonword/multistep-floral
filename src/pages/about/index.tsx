@@ -16,7 +16,7 @@ const About = () => {
   return (
     <main>
       <h1
-        className={`${quattrocento.className} text-center text-4xl text-teal-900 pb-6`}
+        className={`${quattrocento.className} text-center text-4xl text-teal-900 pb-16`}
       >
         About
       </h1>
