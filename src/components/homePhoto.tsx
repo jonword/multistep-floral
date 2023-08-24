@@ -16,7 +16,6 @@ const HomePhoto = ({ photos }: Props) => {
           width={200}
           height={200}
           className="w-auto h-auto rounded-md"
-          loading="lazy"
         />
       </div>
     </>
