@@ -3,7 +3,7 @@ import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex h-12 bg-gray-100 w-full justify-center px-4 gap-6 items-center mt-[100px]">
+    <footer className="flex h-12 bg-gray-200 w-full justify-center px-4 gap-6 items-center mt-[100px]">
       <button className="text-[#4267B2] text-3xl">
         <a
           target="_blank"
