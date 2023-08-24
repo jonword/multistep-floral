@@ -37,22 +37,16 @@ const Home = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex h-screen w-full flex-col pt-24 border">
-        <div className="flex justify-center md:justify-start md:pl-36">
+        <div className="flex justify-center">
           <TypeAnimation
-            sequence={[`Lilium Florals`]}
+            sequence={[`Wedding & Events Floral Designer`]}
             cursor={false}
             wrapper={"h1"}
             speed={1}
-            className={`${fancy.className} text-5xl md:text-8xl font-bold text-teal-800`}
+            className={`${fancy.className} text-3xl font-bold text-teal-800`}
           />
         </div>
-        <div className="flex justify-center pb-12">
-          <h2
-            className={`${barlow.className} font-bold text-md md:text-2xl text-emerald-900`}
-          >
-            Wedding & Event Floral Designer
-          </h2>
-        </div>
+        <div className="pb-12" />
         <Marquee className=" flex justify-center items-center" speed={10}>
           {data.map((x) => (
             <HomePhoto key={x.id} photos={x} />
