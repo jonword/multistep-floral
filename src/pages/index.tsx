@@ -1,10 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import floral from "../../public/assets/images/carousel/308A0113.jpg";
-import { Barlow, Nothing_You_Could_Do, Quattrocento } from "next/font/google";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { Barlow, Quattrocento } from "next/font/google";
 import { MdLocalFlorist } from "react-icons/md";
 import Head from "next/head";
 import { TypeAnimation } from "react-type-animation";
+import { Photos } from "@prisma/client";
+import prisma from "@/util/prisma";
+import Marquee from "react-fast-marquee";
+import HomePhoto from "@/components/homePhoto";
+
+interface Props {
+  data: Photos[];
+}
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -16,7 +24,9 @@ const fancy = Quattrocento({
   weight: "400",
 });
 
-const Home = () => {
+const Home = ({
+  data,
+}: InferGetServerSidePropsType<typeof getServerSideProps> & Props) => {
   return (
     <>
       <Head>
@@ -45,18 +55,24 @@ const Home = () => {
             Wedding & Event Floral Designer
           </h2>
         </div>
-        <div className=" flex justify-center items-center p-4">
-          <Image
-            src={floral}
-            height={400}
-            width={700}
-            alt=""
-            className="bg-gray-100 rounded-lg"
-          />
-        </div>
+        <Marquee className=" flex justify-center items-center" speed={10}>
+          {data.map((x) => (
+            <HomePhoto key={x.id} photos={x} />
+          ))}
+        </Marquee>
       </main>
     </>
   );
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const data = await prisma.photos.findMany();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
