@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { Barlow, Quattrocento } from "next/font/google";
-import { MdLocalFlorist } from "react-icons/md";
 import Head from "next/head";
 import { TypeAnimation } from "react-type-animation";
 import { Photos } from "@prisma/client";
