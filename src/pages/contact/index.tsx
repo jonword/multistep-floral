@@ -15,12 +15,15 @@ const barlow = Barlow({
 const Contact = () => {
   return (
     <>
-      <h1 className={`${quattrocento.className} pb-2 text-center text-4xl`}>
+      <h1
+        className={`${quattrocento.className} pb-8 text-center text-4xl text-teal-900`}
+      >
         Contact
       </h1>
       <p className={`${barlow.className} text-center pb-2`}>
         For wedding inquiries, please fill out the form below. For all other
-        inquiries, you can email me at reneerumfelt@gmail.com! :)
+        inquiries, you can email me at{" "}
+        <span className=" text-gray-800">reneerumfelt@gmail.com</span>! :)
       </p>
       <div
         className={`${barlow.className} flex min-h-screen w-full flex-col items-center p-8 mb-32`}

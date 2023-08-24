@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Nothing_You_Could_Do, Barlow } from "next/font/google";
+import { Nothing_You_Could_Do, Barlow, Quattrocento } from "next/font/google";
 import { MdLocalFlorist } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const headerFont = Nothing_You_Could_Do({
+const headerFont = Quattrocento({
   subsets: ["latin"],
   weight: "400",
 });
@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <h1
-              className={`${barlow.className} text-3xl font-bold text-gray-700 tracking-wide`}
+              className={`${headerFont.className} text-3xl font-bold text-emerald-900 tracking-wide`}
             >
               Lilium
             </h1>
