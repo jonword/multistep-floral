@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <h1
-              className={`${headerFont.className} text-3xl font-bold text-emerald-900 tracking-wide`}
+              className={`${headerFont.className} text-4xl font-bold text-emerald-900 tracking-wide`}
             >
               Lilium
             </h1>
