@@ -16,6 +16,7 @@ const PhotoCard = ({ photos }: Props) => {
           width={500}
           height={500}
           className="w-auto h-auto rounded-md"
+          loading="lazy"
         />
       </div>
     </>
