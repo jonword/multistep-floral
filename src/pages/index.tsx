@@ -43,7 +43,7 @@ const Home = ({
             cursor={false}
             wrapper={"h1"}
             speed={1}
-            className={`${fancy.className} text-3xl font-bold text-teal-800`}
+            className={`${fancy.className} text-2xl md:text-3xl font-bold text-teal-800`}
           />
         </div>
         <div className="pb-12" />
