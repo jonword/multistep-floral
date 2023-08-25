@@ -38,13 +38,11 @@ const Home = ({
       </Head>
       <main className="flex h-screen w-full flex-col pt-24">
         <div className="flex justify-center">
-          <TypeAnimation
-            sequence={[`Wedding & Events Floral Designer`]}
-            cursor={false}
-            wrapper={"h1"}
-            speed={1}
+          <h1
             className={`${fancy.className} text-2xl md:text-3xl font-bold text-teal-800`}
-          />
+          >
+            Wedding & Events Floral Designer
+          </h1>
         </div>
         <div className="pb-12" />
         <Marquee className=" flex justify-center items-center" speed={10}>
