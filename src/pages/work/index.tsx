@@ -25,7 +25,7 @@ const Work = ({
         Work
       </h1>
       <main className="h-full w-full p-16">
-        <div className="flex flex-col md:flex-row h-full w-full items-center justify-center flex-wrap">
+        <div className="flex flex-col md:flex-row h-full w-full items-center justify-center gap-2 flex-wrap">
           {data.map((x) => (
             <PhotoCard key={x.id} photos={x} />
           ))}
