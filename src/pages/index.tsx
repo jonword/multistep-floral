@@ -27,27 +27,26 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen w-full flex-col pt-24">
+      <main className="flex min-h-screen w-full flex-col pt-4">
         <div className="flex justify-center">
           <h1
-            className={`${fancy.className} text-2xl md:text-3xl font-bold text-teal-800`}
+            className={`${fancy.className} text-2xl md:text-5xl font-bold text-teal-800`}
           >
             Wedding & Events Floral Designer
           </h1>
         </div>
-        <div className="pb-12" />
-        <div className="flex mx-auto flex-col md:flex-row h-screen w-full items-center justify-center p-12 gap-6 md:gap-16">
+        <div className="flex flex-col lg:flex-row h-screen w-full items-center lg:justify-center p-8 gap-6 lg:gap-16">
           <div>
             <Image
               src={floral}
-              height={500}
-              width={500}
+              height={300}
+              width={300}
               alt="Florals by Renee"
-              className=" rounded-lg"
+              className="rounded-md"
             />
           </div>
           <div className="md:max-w-[500px]">
-            <p className={`${barlow.className} text-lg`}>
+            <p className={`${barlow.className} text-base md:text-lg`}>
               Lilium Flowers is a wedding and event floral company based in
               Opelika, AL specializing in whimsical, modern, & detailed design.
               The team is headed up by Floral Designer Renee Word, who is
