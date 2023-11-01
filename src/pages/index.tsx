@@ -1,16 +1,9 @@
 import React from "react";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { Barlow, Quattrocento } from "next/font/google";
 import Head from "next/head";
+import Image from "next/image";
+import floral from "../../public/assets/images/about/IMG_0009.jpg";
 import { TypeAnimation } from "react-type-animation";
-import { Photos } from "@prisma/client";
-import prisma from "@/util/prisma";
-import Marquee from "react-fast-marquee";
-import HomePhoto from "@/components/homePhoto";
-
-interface Props {
-  data: Photos[];
-}
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -22,9 +15,7 @@ const fancy = Quattrocento({
   weight: "400",
 });
 
-const Home = ({
-  data,
-}: InferGetServerSidePropsType<typeof getServerSideProps> & Props) => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -36,7 +27,7 @@ const Home = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex h-screen w-full flex-col pt-24">
+      <main className="flex min-h-screen w-full flex-col pt-24">
         <div className="flex justify-center">
           <h1
             className={`${fancy.className} text-2xl md:text-3xl font-bold text-teal-800`}
@@ -45,24 +36,33 @@ const Home = ({
           </h1>
         </div>
         <div className="pb-12" />
-        <Marquee className=" flex justify-center items-center" speed={10}>
-          {data.map((x) => (
-            <HomePhoto key={x.id} photos={x} />
-          ))}
-        </Marquee>
+        <div className="flex mx-auto flex-col md:flex-row h-screen w-full items-center justify-center p-12 gap-6 md:gap-16">
+          <div>
+            <Image
+              src={floral}
+              height={500}
+              width={500}
+              alt="Florals by Renee"
+              className=" rounded-lg"
+            />
+          </div>
+          <div className="md:max-w-[500px]">
+            <p className={`${barlow.className} text-lg`}>
+              Lilium Flowers is a wedding and event floral company based in
+              Opelika, AL specializing in whimsical, modern, & detailed design.
+              The team is headed up by Floral Designer Renee Word, who is
+              devoted to working with our clients to curate a visual story and
+              whimsical experience that is unique to each couple, and reflects
+              both their lifestyle and love story. We are passionate about
+              intentionality and strive to listen to your vision and make every
+              detail of your day beautiful and unique, while giving you a
+              seamless and stress free experience.
+            </p>
+          </div>
+        </div>
       </main>
     </>
   );
 };
 
 export default Home;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await prisma.photos.findMany();
-
-  return {
-    props: {
-      data,
-    },
-  };
-};
