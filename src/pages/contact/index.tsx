@@ -29,13 +29,6 @@ const Contact = () => {
       <div
         className={`${barlow.className} flex min-h-screen w-full flex-col items-center p-8 mb-32`}
       >
-        <div className="flex gap-8 mb-8">
-          <Link href="https://forms.gle/9wB3Chh2BpGFujug6" target="_blank">
-            <button className="hover:bg-emerald-800 duration-200 bg-teal-900 p-4 text-gray-100">
-              <p>Wedding Inquiry</p>
-            </button>
-          </Link>
-        </div>
         <WeddingForm />
       </div>
     </>
