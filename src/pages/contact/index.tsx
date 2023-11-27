@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Quattrocento, Barlow } from "next/font/google";
 import Link from "next/link";
+import WeddingForm from "@/components/weddingForm";
 
 const quattrocento = Quattrocento({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ const Contact = () => {
           </Link>
         </div>
       </div>
+      <WeddingForm />
     </>
   );
 };
