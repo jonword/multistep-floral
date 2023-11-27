@@ -36,8 +36,8 @@ const Contact = () => {
             </button>
           </Link>
         </div>
+        <WeddingForm />
       </div>
-      <WeddingForm />
     </>
   );
 };
